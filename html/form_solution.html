@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+
+    <form>
+      <label for="firstName">First Name:</label>
+      <input name="firstName" type="text" placeholder="Jaden" required>
+      <label for="lastName">Last Name:</label>
+      <input name="lastName" type="text" placeholder="Korr" required>
+      <br>
+      <label for="genderMale">Male</label>
+      <input name="gender" type="radio" value="male">
+      <label for="genderFemale">Female</label>
+      <input name="gender" type="radio" value="female">
+      <label for="genderOther">Other</label>
+      <input name="gender" type="radio" value="other">
+      <br>
+      <label for="email">Email:</label>
+      <input name="email" type="email" required>
+      <label for="password">Password:</label>
+      <input name="password" type="password" minLength="5" maxLength="10" required title="Password must be 5 to 10 chars">
+      <br>
+      <label for="birthday">Birthday:</label>
+      <select name="day" placeholder="Day">
+        <option selected disabled>Day</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <select name="month">
+        <option disabled>Month</option>
+        <option value="jan">Jan</option>
+        <option value="apr">Apr</option>
+        <option value="sept">Sept</option>
+      </select>
+      <select name="year">
+        <option disabled>Year</option>
+        <option value="1986">1986</option>
+        <option value="2001">2001</option>
+      </select>
+      <br>
+      <label for="agree">I agree to the terms and conditions</label>
+      <input type="checkbox">
+      <br>
+      <input type="submit">
+    </form>
+  </body>
+</html>
