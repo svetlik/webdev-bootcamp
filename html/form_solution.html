@@ -8,44 +8,58 @@
     <h1>Register</h1>
 
     <form>
-      <label for="firstName">First Name:</label>
-      <input name="firstName" type="text" placeholder="Jaden" required>
-      <label for="lastName">Last Name:</label>
-      <input name="lastName" type="text" placeholder="Korr" required>
-      <br>
-      <label for="genderMale">Male</label>
-      <input name="gender" type="radio" value="male">
-      <label for="genderFemale">Female</label>
-      <input name="gender" type="radio" value="female">
-      <label for="genderOther">Other</label>
-      <input name="gender" type="radio" value="other">
-      <br>
-      <label for="email">Email:</label>
-      <input name="email" type="email" required>
-      <label for="password">Password:</label>
-      <input name="password" type="password" minLength="5" maxLength="10" required title="Password must be 5 to 10 chars">
-      <br>
-      <label for="birthday">Birthday:</label>
-      <select name="day" placeholder="Day">
-        <option selected disabled>Day</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-      <select name="month">
-        <option disabled>Month</option>
-        <option value="jan">Jan</option>
-        <option value="apr">Apr</option>
-        <option value="sept">Sept</option>
-      </select>
-      <select name="year">
-        <option disabled>Year</option>
-        <option value="1986">1986</option>
-        <option value="2001">2001</option>
-      </select>
-      <br>
-      <label for="agree">I agree to the terms and conditions</label>
-      <input type="checkbox">
-      <br>
+      <div>
+        <label for="first-name">First Name:</label>
+        <input name="first-name" type="text" placeholder="Jaden" required>
+
+        <label for="last-name">Last Name:</label>
+        <input name="last-name" type="text" placeholder="Korr" required>
+      </div>
+
+      <div>
+        <label for="radio-choice-1">Male</label>
+        <input name="radio-choice" id="radio-choice-1" type="radio" value="choice-1">
+
+        <label>Female</label>
+        <input name="radio-choice" id="radio-choice-2" type="radio" value="choice-2">
+
+        <label>Other</label>
+        <input name="radio-choice" id="radio-choice-3" type="radio" value="choice-3">
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input name="email" type="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input name="password" type="password" minLength="5" maxLength="10" required title="Password must be 5 to 10 chars">
+      </div>
+
+      <div>
+        <label>Birthday:</label>
+        <select name="day" placeholder="Day">
+          <option selected disabled>Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="month">
+          <option disabled>Month</option>
+          <option value="jan">Jan</option>
+          <option value="apr">Apr</option>
+          <option value="sept">Sept</option>
+        </select>
+        <select name="year">
+          <option disabled>Year</option>
+          <option value="1986">1986</option>
+          <option value="2001">2001</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="agree">I agree to the terms and conditions</label>
+        <input type="checkbox">
+      </div>
+
       <input type="submit">
     </form>
   </body>

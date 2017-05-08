@@ -1,0 +1,15 @@
+img {
+  float: left;
+  width: 30%;
+  height: 285px;
+  margin: 1.66%;
+}
+
+p {
+  font-family: Orkney;
+  margin-left: 1.66%;
+  font-size: 23px;
+  text-transform: lowercase;
+  border-bottom: 3px solid #f1f1f1;
+  width: 30%;
+}
