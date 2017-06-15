@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Events</title>
+  </head>
+  <body>
+    <button type="button" name="button">Click</button>
+    <p>No one has clicked me yet</p>
+
+    <h1>Title</h1>
+
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+
+    <script type="text/javascript">
+      var button = document.querySelector("button");
+      var paragraph = document.querySelector("p");
+      var title = document.querySelector("h1");
+      var lis = document.querySelectorAll("li");
+
+      button.addEventListener("click", function(){
+        paragraph.textContent = "Button was clicked!";
+        title.style.backgroundColor = "yellow";
+      });
+
+      title.addEventListener("click", function(){
+        alert("h1 was clicked");
+      });
+
+      for(var i = 0; i < lis.length; i++) {
+        lis[i].addEventListener("click", function() {
+          this.style.backgroundColor = "orange";
+        });
+      }
+    </script>
+  </body>
+</html>
