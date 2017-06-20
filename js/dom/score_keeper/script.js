@@ -1,46 +1,54 @@
-var playerOneCount = 0;
-var playerTwoCount = 0;
+var playerOne = {
+  count: 0,
+  button: document.querySelectorAll('button')[0],
+  score: document.querySelector('.player-1')
+}
+
+var playerTwo = {
+  count: 0,
+  button: document.querySelectorAll('button')[1],
+  score: document.querySelector('.player-2')
+}
+
+var players = [playerOne, playerTwo];
+
 var victoryCount = 3;
-var playerOneScore = document.querySelector('.player-1');
-var playerTwoScore = document.querySelector('.player-2');
 var victoryCountDisplay = document.querySelector('.victory-count');
-var playerOneButton = document.querySelectorAll('button')[0];
-var playerTwoButton = document.querySelectorAll('button')[1];
 var resetButton = document.querySelectorAll('button')[2];
 
-playerOneScore.innerHTML = playerOneCount;
+playerOne.score.innerHTML = playerOne.count;
 
-playerTwoScore.innerHTML = playerTwoCount;
+playerTwo.score.innerHTML = playerTwo.count;
 
 victoryCountDisplay.innerHTML = victoryCount;
 
-playerOneButton.addEventListener('click', function() {
-  if (playerOneCount < victoryCount) {
-    playerOneCount+=1;
-    playerOneScore.innerHTML = playerOneCount;
-    check(playerOneCount, victoryCount);
+playerOne.button.addEventListener('click', function() {
+  if (playerOne.count < victoryCount) {
+    playerOne.count+=1;
+    playerOne.score.innerHTML = playerOne.count;
+    check(playerOne, victoryCount);
   };
 })
 
-playerTwoButton.addEventListener('click', function() {
-  if (playerTwoCount < victoryCount) {
-    playerTwoCount+=1;
-    playerTwoScore.innerHTML = playerTwoCount;
-    check(playerTwoCount, victoryCount);
+playerTwo.button.addEventListener('click', function() {
+  if (playerTwo.count < victoryCount) {
+    playerTwo.count+=1;
+    playerTwo.score.innerHTML = playerTwo.count;
+    check(playerTwo, victoryCount);
   };
 })
+
 var reset = function() {
-  playerOneCount = 0;
-  playerTwoCount = 0;
-  playerOneScore = 0;
-  playerTwoScore = 0;
-  playerOneScore.classList.remove('victory');
+  players.forEach(function(player) {
+    player.count = 0;
+    player.score.innerHTML = '0';
+    player.score.classList.remove('victory');
+  })
 }
 
-var check = function(playerCount, victoryCount) {
-  if (playerCount == victoryCount) {
-    playerOneScore.classList.add('victory');
-    reset();
+var check = function(player, victoryCount) {
+  if (player.count == victoryCount) {
+    player.score.classList.add('victory');
   }
 }
 
